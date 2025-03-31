@@ -4,6 +4,7 @@ import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import Locations from './pages/Locations';
 import Contacts from './pages/Contacts';
+import Footer from './components/Footer';
 
 const AppContext = createContext()
 
@@ -40,6 +41,7 @@ function App() {
         <Route path='/locations' element={<Locations/>}/>
         <Route path='/contacts' element={<Contacts/>}/>
       </Routes>
+      <Footer />
     </AppContext.Provider>
   )
 }

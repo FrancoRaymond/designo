@@ -15,8 +15,7 @@ const Home = () => {
         <AppDesign />
         <GraphicDesign />
       </div>
-      <Personalities />
-      <Footer />  
+      <Personalities /> 
     </div>
   )
 }

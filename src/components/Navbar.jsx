@@ -46,7 +46,7 @@ const Navbar = () => {
           </ul>
         </nav>
       )}
-      <div className='flex gap-5'>
+      <div className={`flex gap-5 ${size > 640 ? 'hidden' : ''}`}>
         <img src={menu} alt="menu" onClick={() => setIsMenuOpen(true)} className={`${isMenuOpen ? 'hidden' : ''} size-6 cursor-pointer ${size > 640 ? 'hidden' : ''}`}/>
         <img src={close} alt="close" onClick={() => setIsMenuOpen(false)} className={`${isMenuOpen ? '' : 'hidden'} size-6 cursor-pointer ${size > 640 ? 'hidden' : ''}`}/>
       </div>

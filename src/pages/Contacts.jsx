@@ -1,9 +1,12 @@
 import React from 'react'
+import ContactForm from '../components/contacts/ContactForm'
+import ContactLocations from '../components/contacts/ContactLocations'
 
 const Contacts = () => {
   return (
-    <div className='py-28 text-4xl font-semibold'>
-        CONTACTS PAGE
+    <div className='py-16 overflow-x-clip'>
+        <ContactForm />
+        <ContactLocations />
     </div>
   )
 }
