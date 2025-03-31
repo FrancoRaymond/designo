@@ -2,6 +2,8 @@ import React,{useState, useEffect, createContext, useContext} from 'react'
 import { Routes, Route } from 'react-router-dom'
 import Navbar from './components/Navbar';
 import Home from './pages/Home';
+import Locations from './pages/Locations';
+import Contacts from './pages/Contacts';
 
 const AppContext = createContext()
 
@@ -34,6 +36,9 @@ function App() {
       <Navbar />
       <Routes>
         <Route path='/' element={<Home/>}/>
+        <Route path='*' element={<Home/>}/>
+        <Route path='/locations' element={<Locations/>}/>
+        <Route path='/contacts' element={<Contacts/>}/>
       </Routes>
     </AppContext.Provider>
   )

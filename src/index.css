@@ -1,14 +1,72 @@
 @import "tailwindcss";
 
+:root {
+  --accent-color: #e87f69;
+  --secondary-accent : #fdf3f1;
+  --grayish-black: #1c1c1e;
+
+  --Transparent-accent: rgb(232, 127, 105, 0.5);
+}
 body{
   font-family: "Jost", sans-serif;
   max-width: 1440px;
   margin: 0 auto;
 }
-
 .activeMenu{
   background-color: rgba(0, 0, 0, 0.5);
 }
 .activeMenu ul{
   @apply bg-black py-8
+}
+.hero{
+  background: url('./assets/images/svg/bg-pattern-hero-home.svg') no-repeat;
+  background-color: var(--accent-color);
+}
+
+
+/* DESIGN TYPE SECTION (HOME) */
+
+.webDesign{
+  background: url('./assets/images/home/mobile/image-web-design.jpg') no-repeat center center / cover;
+}
+.serviceOverlay{
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.serviceOverlay:hover{
+  background-color: rgb(232, 127, 105, 0.5);
+}
+.appDesign{
+  background: url('./assets/images/home/mobile/image-app-design.jpg') no-repeat center center / cover;
+}
+.graphicDesign{
+  background: url('./assets/images/home/mobile/image-graphic-design.jpg') no-repeat center center / cover;
+}
+.contactBox::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('./assets/images/svg/bg-pattern-call-to-action.svg')no-repeat center center / cover;
+  z-index: 10;
+}
+
+@media (min-width: 768px){
+  .mappedItems::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 30%;
+    width: 100%;
+    height: 100%;
+    background: url('./assets/images/svg/bg-pattern-leaf.svg') no-repeat center center;
+    background-size: 50%;
+    transform: rotate(180deg);
+    z-index: -1;
+  }
+  .hero{
+    background-position: right;
+    background-size: 65%;
+  }
 }
