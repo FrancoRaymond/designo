@@ -5,6 +5,9 @@ import Home from './pages/Home';
 import Locations from './pages/Locations';
 import Contacts from './pages/Contacts';
 import Footer from './components/Footer';
+import WebDesignPage from './pages/WebDesignPage';
+import AppDesignPage from './pages/AppDesignPage';
+import GraphicDesignPage from './pages/GraphicDesignPage';
 
 const AppContext = createContext()
 
@@ -40,6 +43,9 @@ function App() {
         <Route path='*' element={<Home/>}/>
         <Route path='/locations' element={<Locations/>}/>
         <Route path='/contacts' element={<Contacts/>}/>
+        <Route path='/WebDesignPage' element={<WebDesignPage/>}/>
+        <Route path='/AppDesignPage' element={<AppDesignPage/>}/>
+        <Route path='/GraphicDesignPage' element={<GraphicDesignPage/>}/>
       </Routes>
       <Footer />
     </AppContext.Provider>

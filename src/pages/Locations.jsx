@@ -1,4 +1,5 @@
 import React from 'react'
+import ScrollTop from '../components/ScrollTop'
 import { countries } from '../assets/data/locations'
 import { useAppContext } from '../App'
 import CtaBox from '../components/CtaBox'
@@ -7,6 +8,7 @@ const Locations = () => {
   const { size } = useAppContext()
   return (
     <div className='pt-16 pb-44 flex flex-col gap-7 px-2 sm:px-5 md:px-10 lg:px-24'>
+      <ScrollTop />
       {
         countries.map(country => (
           <div key={country.phone} className='location sm:gap-5 flex flex-col sm:grid sm:grid-cols-3'>
