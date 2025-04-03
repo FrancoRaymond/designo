@@ -8,6 +8,7 @@ import Footer from './components/Footer';
 import WebDesignPage from './pages/WebDesignPage';
 import AppDesignPage from './pages/AppDesignPage';
 import GraphicDesignPage from './pages/GraphicDesignPage';
+import About from './pages/About';
 
 const AppContext = createContext()
 
@@ -41,6 +42,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Home/>}/>
         <Route path='*' element={<Home/>}/>
+        <Route path='/about' element={<About/>}/>
         <Route path='/locations' element={<Locations/>}/>
         <Route path='/contacts' element={<Contacts/>}/>
         <Route path='/WebDesignPage' element={<WebDesignPage/>}/>

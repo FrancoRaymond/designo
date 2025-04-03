@@ -6,9 +6,9 @@ import ContactLocations from '../components/contacts/ContactLocations'
 const Contacts = () => {
   return (
     <div className='py-16 overflow-x-clip'>
-        <ScrollTop />
-        <ContactForm />
-        <ContactLocations />
+      <ScrollTop />
+      <ContactForm />
+      <ContactLocations />
     </div>
   )
 }

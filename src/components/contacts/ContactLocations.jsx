@@ -6,8 +6,8 @@ import canada from '../../assets/images/svg/illustration-canada.svg'
 
 const ContactLocations = () => {
   return (
-    <div className='contactLocationMain relative flex flex-col gap-10 items-center text-center py-20 md:flex-row md:justify-evenly px-2 sm:px-5 md:px-10 lg:px-24'>
-        <div className=''>
+    <div className='contactLocationMain flex flex-col gap-10 items-center text-center py-20 md:flex-row md:justify-evenly px-2 sm:px-5 md:px-10 lg:px-24'>
+        <div>
             <div className='contactLocation mb-3 w-fit md:mx-auto'>
                 <img src={canada} alt="" />
             </div>
@@ -16,7 +16,7 @@ const ContactLocations = () => {
                 <button className='bg-[var(--accent-color)] text-white cursor-pointer w-fit px-3 py-2 rounded-md mt-5'>SEE LOCATION</button>
             </Link>
         </div>
-        <div className=''>
+        <div>
             <div className='contactLocation mb-3 w-fit md:mx-auto'>
                 <img src={australia} alt="" />
             </div>  
@@ -25,7 +25,7 @@ const ContactLocations = () => {
                 <button className='bg-[var(--accent-color)] text-white cursor-pointer w-fit px-3 py-2 rounded-md mt-5'>SEE LOCATION</button>
             </Link>
         </div>
-        <div className=''>
+        <div>
             <div className='contactLocation mb-3 w-fit md:mx-auto'>
                 <img src={uk} alt="" />
             </div>
@@ -38,4 +38,4 @@ const ContactLocations = () => {
   )
 }
 
-export default ContactLocations
+export default ContactLocations;

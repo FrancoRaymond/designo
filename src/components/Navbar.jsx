@@ -32,7 +32,7 @@ const Navbar = () => {
         className={`${size < 640 ? isMenuOpen ? 'activeMenu absolute block top-12 h-screen left-0 right-0 mx-auto w-full' : 'hidden' : ''}`}
       >
         <ul className={`flex gap-8 ${size < 640 ? 'flex-col items-start px-2 h-fit w-full text-white' : 'flex-row text-black'}`}>
-          <li><Link onClick={closeMenu} to="/">OUR COMPANY</Link></li> 
+          <li><Link onClick={closeMenu} to="/about">OUR COMPANY</Link></li> 
           <li><Link onClick={closeMenu} to="/locations">LOCATIONS</Link></li>
           <li><Link onClick={closeMenu} to="/contacts">CONTACTS</Link></li>
         </ul>
@@ -40,7 +40,7 @@ const Navbar = () => {
       ) : (
         <nav className={`${size < 640 ? isMenuOpen ? 'activeMenu absolute block top-14 h-screen left-0 right-0 mx-auto w-full' : 'hidden' : ''}`}>
           <ul className={`flex gap-8 ${size < 640 ? 'flex-col items-center h-fit w-full' : 'flex-row'}`}>
-            <li><Link onClick={closeMenu} to="/">OUR COMPANY</Link></li>
+            <li><Link onClick={closeMenu} to="/about">OUR COMPANY</Link></li>
             <li><Link onClick={closeMenu} to="/locations">LOCATIONS</Link></li>
             <li><Link onClick={closeMenu} to="/contacts">CONTACTS</Link></li>
           </ul>
