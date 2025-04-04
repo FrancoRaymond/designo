@@ -7,7 +7,7 @@ import CtaBox from '../components/CtaBox'
 const Locations = () => {
   const { size } = useAppContext()
   return (
-    <div className='pt-16 pb-44 flex flex-col gap-7 px-2 sm:px-5 md:px-10 lg:px-24'>
+    <div className='pt-14 sm:pt-20 pb-48 flex flex-col gap-7 sm:px-5 md:px-10 lg:px-24'>
       <ScrollTop />
       {
         countries.map(country => (

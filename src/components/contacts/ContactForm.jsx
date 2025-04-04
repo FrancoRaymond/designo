@@ -75,7 +75,7 @@ const ContactForm = () => {
                     value={formData.message} 
                     className='border-b-2 border-gray-100 resize-none w-full py-2 px-3 placeholder:text-gray-100 outline-0 text-white'>
                 </textarea>
-                <button type='submit' className='bg-white cursor-pointer text-black w-fit px-3 py-2 rounded-md mt-5'>SUBMIT</button>
+                <button type='submit' className='bg-white hover:bg-black transition duration-300 hover:text-white shadow hover:shadow-white cursor-pointer text-black w-fit px-3 py-2 rounded-md mt-5'>SUBMIT</button>
             </form>
         </div>
     </div>

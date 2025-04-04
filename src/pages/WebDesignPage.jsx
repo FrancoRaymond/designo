@@ -1,6 +1,7 @@
 import React from 'react'
 import ScrollTop from '../components/ScrollTop'
 import { webdesigns } from '../assets/data/webdesigns'
+import { motion } from 'framer-motion'
 import AppDesign from '../components/home/AppDesign'
 import GraphicDesign from '../components/home/GraphicDesign'
 import CtaBox from '../components/CtaBox'
@@ -15,15 +16,22 @@ const WebDesignPage = () => {
             <p className='text-gray-200 max-w-[400px] w-full'>We build websites that serve as powerful marketing tools and bring memorable brand experiences.</p>
           </div>
       </div>
-      <div className='px-2 sm:px-5 md:px-10 lg:px-24 pt-10 pb-40'>
+      <div className='px-2 sm:px-5 md:px-10 lg:px-24 pt-10 pb-48'>
         <div className='grid grid-cols-1 gap-10 sm:grid-cols-2 md:grid-cols-3 py-10'>
           {
             webdesigns.map(design => (
-              <div key={design.name} className='flex flex-col gap-4 overflow-hidden bg-[var(--secondary-accent)] pb-4 text-center rounded-lg'>
+              <motion.div 
+                key={design.name}
+                initial={{ opacity: 0, y: 50 }} 
+                whileInView={{ opacity: 1, y: 0 }}  
+                viewport={{ once: true, amount: 0.2 }}
+                transition={{ duration: 0.8, ease: "easeOut" }}
+                className='flex flex-col gap-4 overflow-hidden bg-[var(--secondary-accent)] pb-6 text-center rounded-lg'
+              >
                 <img src={design.image} alt="" />
                 <h2 className='text-lg text-[var(--accent-color)]'>{design.name}</h2>
                 <p className='px-5'>{design.discription}</p>
-              </div>
+              </motion.div>
             ))
           }
         </div>

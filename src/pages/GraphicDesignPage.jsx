@@ -1,5 +1,6 @@
 import React from 'react'
 import ScrollTop from '../components/ScrollTop'
+import { motion } from 'framer-motion'
 import { graphicdesigns } from '../assets/data/graphicdesigns.js'
 import WebDesign from '../components/home/WebDesign'
 import AppDesign from '../components/home/AppDesign'
@@ -15,15 +16,22 @@ const GraphicDesignPage = () => {
             <p className='text-gray-200 max-w-[400px] w-full'>We deliver eye-catching branding materials that are tailored to meet your business objectives.</p>
           </div>
       </div>
-      <div className='px-2 sm:px-5 md:px-10 lg:px-24 pt-10 pb-40'>
+      <div className='px-2 sm:px-5 md:px-10 lg:px-24 pt-10 pb-48'>
         <div className='grid grid-cols-1 gap-10 sm:grid-cols-2 md:grid-cols-3 py-10'>
           {
             graphicdesigns.map(design => (
-              <div key={design.name} className='flex flex-col gap-4 overflow-hidden bg-[var(--secondary-accent)] pb-4 text-center rounded-lg'>
+              <motion.div
+                key={design.name} 
+                initial={{ opacity: 0, y: 50 }} 
+                whileInView={{ opacity: 1, y: 0 }}  
+                viewport={{ once: true, amount: 0.2 }}
+                transition={{ duration: 0.8, ease: "easeOut" }}
+                className='flex flex-col gap-4 overflow-hidden bg-[var(--secondary-accent)] pb-6 text-center rounded-lg'
+              >
                 <img src={design.image} alt="" />
                 <h2 className='text-lg text-[var(--accent-color)]'>{design.name}</h2>
                 <p className='px-5'>{design.discription}</p>
-              </div>
+              </motion.div>
             ))
           }
         </div>
@@ -37,4 +45,4 @@ const GraphicDesignPage = () => {
   )
 }
 
-export default GraphicDesignPage
+export default GraphicDesignPage;

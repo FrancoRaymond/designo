@@ -10,13 +10,13 @@ import instagram from '../assets/images/svg/icon-instagram.svg'
 
 const Footer = () => {
   return (
-    <div className='bg-[var(--grayish-black)] pt-32 pb-16 flex flex-col gap-6 items-center px-2 sm:px-5 md:px-10 lg:px-24'>
+    <div className='bg-[var(--grayish-black)] pt-16 pb-16 flex flex-col gap-6 items-center px-2 sm:px-5 md:px-10 lg:px-24'>
         <div className='flex flex-col sm:flex-row sm:justify-between sm:border-b sm:border-gray-400 sm:items-center w-full sm:pb-6 mt-12'>
             <img src={logo} alt="" className='w-44 mx-auto sm:mx-0'/>
             <div className=' flex flex-col gap-3 items-center text-white  py-6 mt-6 sm:mt-0 sm:py-0 sm:w-fit border-t border-gray-400 w-full sm:border-t-0 sm:flex-row sm:gap-5'>
-                <Link to="/">OUR COMPANY</Link>
-                <Link to="/locations">LOCATIONS</Link>
-                <Link to="/contacts">CONTACTS</Link>
+                <Link to="/" className='hover:text-[var(--accent-color)] transition duration-300'>OUR COMPANY</Link>
+                <Link to="/locations" className='hover:text-[var(--accent-color)] transition duration-300'>LOCATIONS</Link>
+                <Link to="/contacts" className='hover:text-[var(--accent-color)] transition duration-300'>CONTACTS</Link>
             </div>
         </div>
         <div className='w-full md:flex md:justify-between'>
@@ -32,13 +32,13 @@ const Footer = () => {
                     <span>M : contact@designo.co</span>
                 </div>
             </div>
-            <div className='flex gap-4 mt-12 mx-auto md:mx-0 w-fit md:mb-0'>
-                <img src={facebook} alt="" className='h-6'/>
-                <img src={youtube} alt="" className='h-6'/>
-                <img src={twitter} alt="" className='h-6'/>
-                <img src={pinterest} alt="" className='h-6'/>
-                <img src={instagram} alt="" className='h-6'/>
-            </div>  
+            <ul className='flex gap-4 mt-12 mx-auto md:mx-0 w-fit md:mb-0'>
+                <li><a href="#"><img src={facebook} alt="" className='h-6'/></a></li>
+                <li><a href="#"><img src={youtube} alt="" className='h-6'/></a></li>
+                <li><a href="#"><img src={twitter} alt="" className='h-6'/></a></li>
+                <li><a href="#"><img src={pinterest} alt="" className='h-6'/></a></li>
+                <li><a href="#"><img src={instagram} alt="" className='h-6'/></a></li>
+            </ul>  
         </div>
     </div>
   )
