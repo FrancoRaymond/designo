@@ -1,5 +1,6 @@
 import React from 'react'
 import { motion } from 'framer-motion'
+import { Link } from 'react-router-dom'
 import phones from '../../assets/images/home/image-hero-phone.png'
 
 const Hero = () => {
@@ -16,7 +17,9 @@ const Hero = () => {
         >
           <h1 className='text-white text-4xl lg:text-5xl lg:max-w-96 mt-5 md:mt-0'>Award-winning custom designs and digital branding solutions</h1>
           <p className='text-gray-200'>With over 10 years in the industry, we are experienced in creating fully responsive websites, app design, and engaging brand experiences. Find out more about our services.</p>
-          <button className='bg-white text-black w-fit px-3 py-2 rounded-md mx-auto md:mx-0 hover:bg-black transition duration-300 hover:text-white shadow hover:shadow-white cursor-pointer'>LEARN MORE</button>
+          <Link to="/about">
+            <button className='bg-white text-black w-fit px-3 py-2 rounded-md mx-auto md:mx-0 hover:bg-black transition duration-300 hover:text-white shadow hover:shadow-white cursor-pointer'>LEARN MORE</button>
+          </Link>
         </motion.div>
           <img src={phones} alt="" className='-mb-[67%] w-full md:-mb-28 lg:-mb-40 md:scale-110'/>
       </div>
